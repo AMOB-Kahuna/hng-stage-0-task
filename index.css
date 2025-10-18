@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  margin: 20px 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 90%;
+  height: fit-content;
+  padding: 50px 20px 40px;
+  margin: 20px auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.5);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 20px 0 0;
+  background-color: #b0bec5;
+  color: #1e90ff;
+  text-shadow: 0px 0px 1px rgba(51, 51, 51, 0.7);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.user-bio {
+  font-size: 1rem;
+}
+
+.user-social-links {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.user-social > a {
+  color: #b0bec5;
+}
+
+.user-social > a:hover {
+  color: #1e90ff;
+}
+
+.user-social > a:focus {
+  color: #1e90ff;
+}
+
+section > ul > li {
+  list-style-position: inside;
+}
+
+section {
+  text-align: left;
+}
+
+section > h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+section > ul {
+  padding: 0 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media(min-width: 768px) {
+
+  body {
+    margin: 0;
+  }
+
+  .profile-card {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-right: 1px solid rgba(44, 62, 80, 0.5);
+    padding-right: 20px;
+  }
+
+  .right {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .right section:first-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.5);
+  }
+
+  section {
+    padding-left: 30px;
+  }
+
+  .user-time {
+    margin: 20px 30px 0 0;
+  }
+
+  .user-bio {
+    padding: 0 20px;
+  }
+
+  .user-social-links {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .profile-card {
+    width: 60%;
+  }
+
+  .user-name {
+    font-size: 2rem;
+  }
+
+  .user-bio {
+    font-size: 1.5rem;
+  }
+
+  .user-social-links {
+    font-size: 2rem;
+  }
+
+  section > h3 {
+    font-size: 1.8rem;
+  }
+
+  section > ul {
+    font-size: 1.4rem;
+  }
+}

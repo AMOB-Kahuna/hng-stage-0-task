@@ -3,9 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Profile card</title>
 </head>
 <body>
+  <article class="profile-card" data-testid="test-profile-card">
+    <div class="left">
+      <figure>
+        <img src="./amob.jpeg" alt="My caption image" class="user-avatar" data-testid="test-user-avatar">
+      </figure>
   
+      <p class="user-time" id="time" data-testid="test-user-time">current time(ms): </p>
+  
+      <h2 class="user-name" data-testid="test-user-name" aria-label="Name">Abdulmujeeb Ballo</h2>
+
+      <p class="user-bio" data-testid="test-user-bio">
+        I'm a web developer based in Ibadan, Nigeria. I love building apps that solve real-world problems, and that are delightful to use. My specialities include HTML, CSS, JavaScript, and React JS.
+      </p>
+
+      <!-- social links -->
+      <ul class="user-social-links" data-testid="test-user-social-links">
+        <li class="user-social" data-testid="test-user-social-github">
+          <a href="https://github.com/AMOB-Kahuna" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </li>
+        <li class="user-social" data-testid="test-user-social-whatsapp">
+          <a href="https://wa.me/2347017802979" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </li>
+        <li class="user-social" data-testid="test-user-social-linkedin">
+          <a href="https://www.linkedin.com/in/abdulmujeeb-ballo-763611251" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </li>
+        <li class="user-social" data-testid="test-user-social-email">
+          <a href="mailto:balloabdulmujeeb42@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-google" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <!-- hobbies -->
+      <section class="user-hobbies" data-testid="test-user-hobbies">
+        <h3>Hobbies</h3>
+        <ul role="list">
+          <li>Gaming</li>
+          <li>Reading</li>
+          <li>Cat Lover</li>
+          <li>Building Random Stuffs</li>
+        </ul>
+      </section>
+  
+      <!-- dislikes -->
+      <section class="user-dislikes" data-testid="test-user-dislikes">
+        <h3>Dislikes</h3>
+        <ul role="list">
+          <li>Attending Social Events</li>
+          <li>Salad</li>
+          <li>Blame Shifters</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <script src="./index.js"></script>
 </body>
 </html>
