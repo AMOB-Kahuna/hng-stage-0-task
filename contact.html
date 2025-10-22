@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <title>Contact Me</title>
+</head>
+<body>
+
+  <nav class="nav">
+    <li><a href="./index.html" id="nav-link">Profile</a></li>
+    <li><a href="./contact.html">Contact Me</a></li>
+    <li><a href="./about.html">About Me</a></li>
+  </nav>
+
+  <main class="contact-main">
+    <h1>Send me a mail</h1>
+    <form id="contact-form" novalidate>
+      <input type="hidden" name="time" id="time">
+  
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" id="name" data-testid="test-contact-name" required aria-required="true" aria-invalid="false" aria-describedby="error-name">
+        <p class="error" id="error-name" data-testid="test-contact-error-name" role="alert"></p>
+      </div>
+  
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" id="email" data-testid="test-contact-email" required aria-required="true" aria-invalid="false" aria-describedby="error-email">
+        <p class="error" id="error-email" data-testid="test-contact-error-email" role="alert"></p>
+      </div>
+  
+      <div>
+        <label>Subject</label>
+        <input type="text" name="title" id="title" data-testid="test-contact-subject" required aria-required="true" aria-invalid="false" aria-describedby="error-subject">
+        <p class="error" id="error-subject" data-testid="test-contact-error-subject" role="alert"></p>
+      </div>
+  
+      <div>
+        <label>Message</label>
+        <textarea name="message" id="message" data-testid="test-contact-message" required aria-required="true" aria-describedby="error-message" aria-invalid="false"></textarea>
+        <p class="error" id="error-message" data-testid="test-contact-error-message" role="alert"></p>
+      </div>
+  
+      <input type="submit" value="Send Message" id="send-mail-btn" data-testid="test-contact-submit">
+    </form>
+
+    <div class="success-message" id="success-message" data-testid="test-contact-success"></div>
+  </main>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="./contact.js"></script>
+</body>
+</html>
