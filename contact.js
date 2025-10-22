@@ -93,6 +93,11 @@ contactForm.addEventListener('submit', function(e) {
         successMessageEl.style.display  = "none";
       }, 3000);
       sendMailBtn.value = 'Send Message';
+
+      nameEl.value = "";
+      emailEl.value = "";
+      subjectEl.value = "";
+      messageEl.value = "" ;
     }, (error) => {
       sendMailBtn.value = 'Send Message';
       console.log('FAILED...', error);
