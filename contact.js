@@ -89,15 +89,14 @@ contactForm.addEventListener('submit', function(e) {
     .then(() => {
       successMessageEl.textContent = "Message sent successfully";
       successMessageEl.style.display  = "block";
-      setTimeout(() => {
-        successMessageEl.style.display  = "none";
-      }, 3000);
-      sendMailBtn.value = 'Send Message';
-
       nameEl.value = "";
       emailEl.value = "";
       subjectEl.value = "";
       messageEl.value = "" ;
+      setTimeout(() => {
+        successMessageEl.style.display  = "none";
+      }, 3000);
+      sendMailBtn.value = 'Send Message';
     }, (error) => {
       sendMailBtn.value = 'Send Message';
       console.log('FAILED...', error);
